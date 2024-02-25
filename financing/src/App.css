@@ -1,0 +1,32 @@
+.app{
+    position: absolute;
+    margin-top: -5%;
+}
+
+.transaction{
+    max-width: 120px;
+    transform: translateX(410px) translateY(200px);
+}
+
+.recent{
+    transform: translateX(950px) translateY(-500px);
+}
+
+.vat{
+    max-width: 120px;
+    transform: translateX(410px) translateY(220px)
+}
+
+.currency{
+    max-width: 120px;
+    transform: translateX(410px) translateY(240px)
+}
+
+.invest{
+    max-width: 120px;
+    transform: translateX(410px) translateY(260px)
+}
+
+.login{
+    transform: translateX(1375px) translateY(-600px)
+}

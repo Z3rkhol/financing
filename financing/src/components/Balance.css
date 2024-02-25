@@ -1,0 +1,6 @@
+.balance-card {
+    max-height: 500px;
+    width: 20vw;
+    margin: auto;
+    transform: translateY(-100px) translateX(600px);
+}
