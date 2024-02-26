@@ -8,7 +8,6 @@ const RecentTransactions = ({ transactions }) => {
   const recentTransactions = transactions.slice(-5).reverse();
 
     const showAllTransactionsDialog = () => {
-        // Generate HTML for category and price filter inputs using Bootstrap classes
         const filterHtml = `
         <div class="row g-2 mb-3"> <!-- Bootstrap row with gutters -->
             <div class="col"> <!-- Column for the category filter -->
@@ -23,17 +22,14 @@ const RecentTransactions = ({ transactions }) => {
         </div>
         `;
     
-        // Show the SweetAlert2 dialog
         MySwal.fire({
         title: 'Všechny transakce',
-        html: filterHtml + `<ul id="transactions-list" class="list-unstyled"></ul>`, // Using 'list-unstyled' to remove default list styling
+        html: filterHtml + `<ul id="transactions-list" class="list-unstyled"></ul>`,
         didOpen: () => {
-            // Function to update the transactions list based on filters
             const updateTransactionsList = () => {
             const selectedCategory = document.getElementById('filter-category').value;
             const minAmount = document.getElementById('filter-amount').value;
     
-            // Filter transactions based on selected category and minimum amount
             const filteredTransactions = transactions.filter((t) => {
                 return (selectedCategory === '' || t.category === selectedCategory) && 
                     (minAmount === '' || t.amount >= minAmount);
@@ -46,21 +42,14 @@ const RecentTransactions = ({ transactions }) => {
                 </li>
             `).join('');
     
-            // Update the transactions list in the dialog
             document.getElementById('transactions-list').innerHTML = transactionsHtml;
             };
     
-            // Initially call updateTransactionsList to populate list
             updateTransactionsList();
     
-            // Add event listeners to filter inputs to update the list on change
             document.getElementById('filter-category').addEventListener('change', updateTransactionsList);
             document.getElementById('filter-amount').addEventListener('input', updateTransactionsList);
-        },
-        preConfirm: () => {
-            // Implement if you need to do something when the dialog is confirmed
-        }
-        });
+        },});
     };
   
 

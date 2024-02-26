@@ -10,10 +10,10 @@ const VatCalculator = () => {
         const { value: formValues } = await MySwal.fire({
             title: 'Výpočet DPH',
             html: `
-                <div class="form-group d-flex justify-content-center mb-3"> <!-- Center the input horizontally -->
+                <div class="form-group d-flex justify-content-center mb-3">
                     <input id="swal-input1" class="swal2-input form-control" placeholder="Cena bez DPH" style="max-width: 175px; margin: auto;">
                 </div>
-                <div class="form-group d-flex justify-content-center"> <!-- Center the select horizontally -->
+                <div class="form-group d-flex justify-content-center">
                     <select id="swal-input2" class="swal2-input form-control" style="max-width: 175px; margin: auto;">
                         <option value="0.21">21%</option>
                         <option value="0.15">12%</option>

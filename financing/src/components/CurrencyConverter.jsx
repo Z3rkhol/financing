@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const MySwal = withReactContent(Swal);
 
@@ -17,7 +17,6 @@ const CurrencyConverter = () => {
         const currencies = ['EUR', 'USD', 'CZK'];
         const fetchRates = async () => {
             try {
-                // Fetch rates for each currency and update state accordingly
                 for (let currency of currencies) {
                     const response = await axios.get(`https://v6.exchangerate-api.com/v6/6212669bbc2644d8280c6314/latest/${currency}`);
                     if (response.data && response.data.conversion_rates) {
