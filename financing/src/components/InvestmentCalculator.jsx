@@ -45,7 +45,7 @@ const InvestmentCalculator = () => {
     };
 
     return (
-        <button className="btn btn-primary" onClick={calculateFutureValue}>Vypočítejte budoucí hodnotu</button>
+        <button className="btn btn-primary" onClick={calculateFutureValue}>Výpočet investice</button>
     );
 };
 
