@@ -16,8 +16,7 @@ const VatCalculator = () => {
                 <div class="form-group d-flex justify-content-center"> <!-- Center the select horizontally -->
                     <select id="swal-input2" class="swal2-input form-control" style="max-width: 175px; margin: auto;">
                         <option value="0.21">21%</option>
-                        <option value="0.15">15%</option>
-                        <option value="0.10">10%</option>
+                        <option value="0.15">12%</option>
                         <option value="0">Bez DPH</option>
                     </select>
                 </div>
